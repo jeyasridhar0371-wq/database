@@ -18,10 +18,10 @@ function Inputpage(props) {
     function add() {
         // console.log(props.name)
         if (props.name == "Add") {
-            axios.post("http://localhost:3000/addstudent", { name: name, age: age, course: course, status: selectoption })
+            axios.post("https://database-backend-cqv5.onrender.com/addstudent", { name: name, age: age, course: course, status: selectoption })
             setStudentlist([...studentlist, { name: name, age: age, course: course, status: selectoption }])
         }else{
-            axios.post("http://localhost:3000/updatestudent",{ name: name, age: age, course: course, status: selectoption, oldname:newName })
+            axios.post("https://database-backend-cqv5.onrender.com/updatestudent",{ name: name, age: age, course: course, status: selectoption, oldname:newName })
             // console.log(name)
             
         }
