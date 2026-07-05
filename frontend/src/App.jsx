@@ -14,7 +14,7 @@ function App() {
   const [newSelectoption,setnewSelectoption] = useState()
 
   useEffect(function () {
-    axios.get("http://localhost:3000/data").then((data) => {
+    axios.get("https://database-backend-cqv5.onrender.com/data").then((data) => {
       setStudentlist(data.data)
       console.log(studentlist)
     })
@@ -25,7 +25,7 @@ function App() {
     setnewAge(evt.target.parentElement.parentElement.children[1].textContent)
     setnewCourse(evt.target.parentElement.parentElement.children[2].textContent)
     setnewSelectoption(evt.target.parentElement.parentElement.children[3].textContent)
-    axios.post("http://localhost:3000/updatestudent",{name:newName,age:newAge,course:newCourse,status:newSelectoption})
+    axios.post("https://database-backend-cqv5.onrender.com/updatestudent",{name:newName,age:newAge,course:newCourse,status:newSelectoption})
     
     callback()
   }
@@ -41,7 +41,7 @@ function App() {
     let newAge = evt.target.parentElement.parentElement.children[1].textContent
     let newCourse = evt.target.parentElement.parentElement.children[2].textContent
     let newSelectoption = evt.target.parentElement.parentElement.children[3].textContent
-    axios.post("http://localhost:3000/deletestudent",{name:newName,age:newAge,course:newCourse,status:newSelectoption})
+    axios.post("https://database-backend-cqv5.onrender.com/deletestudent",{name:newName,age:newAge,course:newCourse,status:newSelectoption})
   }
 
 
