@@ -6,7 +6,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect("mongodb+srv://jeyasridhar0371_db_user:5Uce2jWCMd4IK7Ya@cluster0.uftmwcn.mongodb.net/?appName=Cluster0/studentDB").then(()=>{
+mongoose.connect("mongodb+srv://jeyasridhar0371_db_user:NapmUAuGknOPUQkY@cluster1.lqrgq6l.mongodb.net/?appName=Cluster1/studentDB").then(()=>{
     console.log("mongodb connected...")
 }).catch(()=>{
     console.log("mongodb not connected...")
