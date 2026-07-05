@@ -6,7 +6,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect("https://database-backend-cqv5.onrender.com/studentDB").then(()=>{
+mongoose.connect("mongodb://127.0.0.1:27017/studentDB").then(()=>{
     console.log("mongodb connected...")
 }).catch(()=>{
     console.log("mongodb not connected...")
